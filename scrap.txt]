@@ -1,0 +1,1 @@
+document.getElementsByClassName('pro').innerHTML += "<tr><td>"+i+"</td><td>"+products[i]+"</td> <td>"+products[i]+"</td><td>"+products[i]+"</td><td><button>Remove Items</button></td></tr>";

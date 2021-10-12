@@ -1,0 +1,33 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    background-color: blanchedalmond;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.pro{
+    width:30%;
+    text-align: center;
+    margin:20px;
+} 
+
+.pro img
+{
+    height:200px;
+    width:60%;
+}
+
+#cart{
+    margin-left: 30%;
+}
+#cart img{
+    height: 100px;
+    width: 100px;
+}
+
