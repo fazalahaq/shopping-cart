@@ -1,0 +1,16 @@
+Create a list of products each having a name, price, image and an Add to Cart button.
+Display the items' image, name, price and quantity currently in Cart below the list.
+
+
+Using JavaScript, implement the below functionalities :
+1. The User should be able to add the product to cart.
+2. The cart should have a Remove button to remove a particular product.
+3. The user could increase the quantity of any product.
+4. The total price should also be visible to the user below the cart at all times and should update as and when the cart contents or product quantities change.
+5. Create a purchase button. Clicking on it, will display a Thank You message to the user and remove all the products from the user’s cart.
+
+
+Use external CSS for designing and external JS.
+
+
+Remember to use proper names whenever required, indent your code and use a modular approach.

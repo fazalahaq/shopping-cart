@@ -11,32 +11,39 @@ for(var i in product){
     head += "<h1>"+product[i].name+"</h1>";
     head += "<img src="+product[i].image+">";  
     head += "<p>"+product[i].price+"</p>";
-    // head +="<input type ='number'>";
     head += "<button onclick=mytable("+i+")>Add to cart </button>";
     head +="</div>";
 }
 head += "</div>";
-head +="<div id='cart'> </div>"
+head +="<div id='cart'> </div>";
 document.write(head);
-
 var html = "";
-html+= "<table border='1'> <tr><th>Product name</th>  <th>Quantity</th>  <th>image</th> <th>price</th></tr>";
+var arr = [];
+    var count=0;
 function mytable(i){
-     html +="<tr><td>"+product[i].name+"</td><td><input type='number' value="+product[i].Quantity+"></td><td>"+"<img src="+product[i].image+"></td><td>"+product[i].price+"</td><td><button>Remove Items</button></td></tr>";
-     document.getElementById('cart').innerHTML = html; 
-     var arr = [];
+    if (count==0){
+    count=1;
+    html = "<table border='1'> <tr>  <th>Name</th>  <th>Image</th> <th>price</th> <th>Quantity</th></tr>";
+    document.getElementById("cart").innerHTML=html;
+    //console.log("fazal");
+}
+     if(arr.includes(i))
+     {
+        product[i].Quantity+=1;
+        console.log("inc"+i);
+        document.getElementById("inc"+i).innerHTML=product[i].Quantity;
+}
+     else{
         arr.push(i);
-        document.getElementById('cart').innerHTML = arr;
+        myfun(i);
+        for(i in arr){
+        document.getElementById("inc"+i).innerHTML=product[i].Quantity;
+        }
     }
-    //document.getElementById("cart").innerHTML = product[i].Quantity.;
-// var count = "<td><input type='number' value="+product[i].Quantity+"></td>";
-// function addElement(){
-//     html += document.getElementById("cart").innerHTML = mytable(i).count++;
-// }
-// // var count = 1;
-// // function addElement(){
-// //   document.getElementById("cart").innerHTML = count++;
-// // }
-// addElement();
-
-
+}
+function myfun(i){
+        html += "<tr><td>"+product[i]["name"]+"</td> <td><img src="+product[i]['image']+"></td><td>"+product[i]['price']+"</td><td id='inc"+i+"'>"+product[i]['Quantity']+"</td></tr><br>";
+        document.getElementById("cart").innerHTML=html;          
+        //document.write(html);
+    }
+    //html += "</table>";

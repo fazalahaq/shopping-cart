@@ -1,0 +1,48 @@
+document.getElementsByClassName('pro').innerHTML += "<tr><td>"+i+"</td><td>"+products[i]+"</td> <td>"+products[i]+"</td><td>"+products[i]+"</td><td><button>Remove Items</button></td></tr>";
+
+
+
+
+var head ="<div id='main'>";
+var table = "<table border='1'> <tr>  <th>Name</th>  <th>Image</th> <th>price</th> <th>Quantity</th></tr>";
+    arr = [0,1,4,5];
+    function myfun(arr){
+            for(var i in arr){
+                        table += "<tr><td>"+product[arr[i]]["name"]+"</td> <td><img src="+product[arr[i]]['image']+"></td><td>"+product[arr[i]]['price']+"</td><td>"+product[arr[i]]['Quantity']+"</td></tr>";    
+            }
+        }
+        myfun(arr);
+
+table += "</table>";
+document.write(table);
+head += "</div>";
+document.write(head);
+
+
+
+//  var arr = [];
+    //  if(arr.includes(i))
+    //  {
+    //     console.log(product[i]);
+    //     console.log(++product[i].Quantity);
+    //  } 
+    //  else{
+    //     arr.push(i);
+    //     document.getElementById('cart').innerHTML = arr;
+    //  }
+
+    html +="<tr><td>"+product[i].name+"</td><td><input type='number' value="+product[i].Quantity+"></td><td>"+"<img src="+product[i].image+"></td><td>"+product[i].price+"</td><td><button>Remove Items</button></td></tr>";
+    //console.log(html);
+
+
+
+        //document.getElementById("cart").innerHTML = product[i].Quantity.;
+// var count = "<td><input type='number' value="+product[i].Quantity+"></td>";
+// function addElement(){
+//     html += document.getElementById("cart").innerHTML = mytable(i).count++;
+// }
+// // var count = 1;
+// // function addElement(){
+// //   document.getElementById("cart").innerHTML = count++;
+// // }
+// addElement();
