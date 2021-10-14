@@ -4,7 +4,6 @@ var product = [{"name":"jeans","image":"pics/jeans3.jpg","price":500,"Quantity":
     {"name":"sweter","image":"pics/sweter.jpg","price":1100,"Quantity":1},
     {"name":"trouser","image":"pics/trouser.jpg","price":600,"Quantity":1},
     {"name":"tshirt","image":"pics/tshirt.jpg","price":250,"Quantity":1}];
-
 var head ="<div id='main'>";
 for(var i in product){
     head +="<div class='pro'>";
@@ -29,8 +28,8 @@ function mytable(i){
 }
      if(arr.includes(i))
      {
-        product[i].Quantity+=1;
-        console.log("inc"+i);
+        product[i].Quantity++;
+        //console.log("inc"+i);
         document.getElementById("inc"+i).innerHTML=product[i].Quantity;
 }
      else{
@@ -42,8 +41,13 @@ function mytable(i){
     }
 }
 function myfun(i){
-        html += "<tr><td>"+product[i]["name"]+"</td> <td><img src="+product[i]['image']+"></td><td>"+product[i]['price']+"</td><td id='inc"+i+"'>"+product[i]['Quantity']+"</td></tr><br>";
+        html += "<tr><td>"+product[i]["name"]+"</td> <td><img src="+product[i]['image']+"></td><td>"+product[i]['price']+"</td><td id='inc"+i+"'>"+product[i]['Quantity']+"</td><td><button class='rm' onclick=remove("+i+")>Remove Item</button></td></tr><br>";
         document.getElementById("cart").innerHTML=html;          
         //document.write(html);
+    }
+
+    function remove(i){
+        var rmv= document.getElementsByClassName("rm")[i];
+        rmv.remove(inc);
     }
     //html += "</table>";
